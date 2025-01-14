@@ -60,7 +60,7 @@ public class VideoService {
         );
         String payload = String.format(
             "{\"contents\":[{\"parts\":[{\"text\":\"%s\"}]}]}",
-            description + "\nPrompt: This is the transcripted text from a youtube video, generate the summary of the video - " + prompt
+            description + "\nPrompt: This is the transcripted text from a youtube video, generate the summary of the video - " + prompt + "Also, in a single line, tell me something about me according to the type of videos I watch or the prompt I gave you, you may choose to roast me."
         );
         try {
             String response = webClient.post()
